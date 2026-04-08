@@ -50,32 +50,36 @@ export function FAQs() {
       </div>
       <Accordion type="single" collapsible defaultValue="branding" className="grid w-full gap-4">
         <AccordionItemFAQs value="branding">
-          <AccordionTriggerFAQs>Will my app show your branding anywhere?</AccordionTriggerFAQs>
+          <AccordionTriggerFAQs>How do I add an expense in SplitMate?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
             <p>
-              Never. Your app will be fully white-labeled with your own name, logo, and design. We stay completely
-              invisible.
+              You can add expenses three ways: snap a receipt photo, speak it out loud, or enter it manually. SplitMate
+              then organizes everything into a clear per-person breakdown.
             </p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>
         <AccordionItemFAQs value="skills">
-          <AccordionTriggerFAQs>Do I need technical skills to use Acme?</AccordionTriggerFAQs>
+          <AccordionTriggerFAQs>Can SplitMate handle group trips and shared households?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
             <p>
-              No. We handle all the technical setup for you. You can focus on your business while we handle the rest.
+              Yes. SplitMate is built for friends, roommates, and travel crews, making it easy to track shared spending
+              and keep everyone on the same page.
             </p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>
         <AccordionItemFAQs value="devices">
-          <AccordionTriggerFAQs>Will my app work on all devices?</AccordionTriggerFAQs>
+          <AccordionTriggerFAQs>What makes SplitMate different from a simple split calculator?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
-            <p>Yes. Our app is designed to work on all devices, including iOS and Android.</p>
+            <p>
+              It does more than math. SplitMate uses AI-powered capture, supports real-time group collaboration, and
+              gives one-tap settle-ups so splitting feels effortless from start to finish.
+            </p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>
         <AccordionItemFAQs value="notifcations">
-          <AccordionTriggerFAQs>Can I send notifications and updates to users?</AccordionTriggerFAQs>
+          <AccordionTriggerFAQs>Is SplitMate available on iPhone?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
-            <p>Yes. You can send notifications and updates to users through our app.</p>
+            <p>Yes. SplitMate is built for iPhone with a clean, fast experience for capturing expenses and settling up.</p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>
       </Accordion>

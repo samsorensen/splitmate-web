@@ -47,8 +47,7 @@ export function Features() {
         Discover our<div className="text-muted-foreground">exceptional features</div>
       </h2>
       <p className="mb-3 max-w-lg text-center leading-6 tracking-tight sm:text-xl lg:mb-8">
-        We&apos;ve built the ultimate white-label app platform so you can focus on growing your brand - not building
-        tech
+        SplitMate makes shared expenses feel effortless. Snap a receipt, add it manually, or speak it out loud, and we handle the math.
       </p>
       <FeaturesCarousel features={features} className="block lg:hidden" />
       <FeaturesTabs features={features} className="hidden lg:block" />

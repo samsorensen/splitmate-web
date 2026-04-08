@@ -19,14 +19,14 @@ export function Hero() {
             <PillAvatar src="/avatars/4.jpg" />
           </PillAvatarGroup>
           <p className="text-muted-foreground px-2 text-xs font-medium sm:border-l-1 sm:text-sm">
-            Join <span className="text-foreground">3 Million</span> other users already on board
+            Join <span className="text-foreground">8</span> other users already on board
           </p>
         </Pill>
         <h1 className="text-center text-4xl leading-[1.1] font-medium tracking-tight sm:text-7xl">
-          Meet the App<span className="text-muted-foreground block">That Does It All.</span>
+          Meet SplitMate<span className="text-muted-foreground block">The App That Does It All.</span>
         </h1>
         <p className="max-w-lg text-center leading-6 tracking-tight sm:text-xl">
-          Powerful, intuitive, and ready to make your life easier, start using Acme App today.
+          Split bills in seconds, settle up with Stripe, and keep roommate money stress out of your life.
         </p>
         <Button className="mb-10 w-fit" size="lg" asChild>
           <Link href="/pricing">Get Started</Link>

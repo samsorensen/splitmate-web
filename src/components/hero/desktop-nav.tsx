@@ -19,9 +19,15 @@ type Props = {
 
 export function DesktopNav({ items, className }: Props) {
   return (
-    <nav className={cn("mx-auto flex w-full max-w-7xl items-center justify-between gap-4", className)}>
-      <Link href="/">
-        <Image src="/logo.svg" alt="logo" width={86} height={26} />
+    <nav className={cn("relative mx-auto flex w-full max-w-7xl items-center justify-center", className)}>
+      <Link href="/" className="absolute left-0 block w-[126px]">
+        <Image
+          src="/logo-text.png"
+          alt="logo"
+          width={120}
+          height={36}
+          className="w-full h-auto"
+        />
       </Link>
       <NavigationMenu>
         <NavigationMenuList className="gap-8">
@@ -32,7 +38,7 @@ export function DesktopNav({ items, className }: Props) {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-      <Button asChild>
+      <Button asChild className="absolute right-0">
         <Link href="/pricing">Get Started</Link>
       </Button>
     </nav>
