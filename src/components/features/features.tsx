@@ -1,7 +1,7 @@
 import { FeaturesCarousel } from "@/components/features/features-carousel";
 import { FeaturesTabs } from "@/components/features/features-tabs";
 import { Badge } from "@/components/ui/badge";
-import { ActivityIcon, ChartNoAxesColumnIcon, SlidersIcon, ZapIcon } from "lucide-react";
+import { CameraIcon, MicIcon, UsersIcon, HandCoinsIcon } from "lucide-react";
 
 export type Feature = {
   icon: React.ReactNode;
@@ -12,28 +12,33 @@ export type Feature = {
 
 const features = [
   {
-    icon: <SlidersIcon size={20} />,
-    title: "Full Brand Control",
-    description: "Make it yours—customize logos, colors, domains, and more.",
-    image: "/app-image-1.png",
+    icon: <CameraIcon size={20} />,
+    title: "Scan Receipts in Seconds",
+    description:
+      "Snap a photo and SplitMate pulls out items, totals, and who paid—no manual entry needed.",
+    image: "/feature-screenshots/receipt-scan.png",
+    
   },
   {
-    icon: <ZapIcon size={20} />,
-    title: "Fast, Native Performance",
-    description: "Built with native tech for fast, smooth performance.",
-    image: "/app-image-1.png",
+    icon: <MicIcon size={20} />,
+    title: "Log Expenses by Voice",
+    description:
+      "Just say what you spent and SplitMate turns it into a clean expense with the right split.",
+    image: "/feature-screenshots/voice-listening.png",
   },
   {
-    icon: <ActivityIcon size={20} />,
-    title: "Push Notifications",
-    description: "Engage users with real-time updates and alerts.",
-    image: "/app-image-1.png",
+    icon: <UsersIcon size={20} />,
+    title: "Groups That Stay in Sync",
+    description:
+      "Create a group for roommates, trips, or events and keep every balance visible for everyone.",
+    image: "/feature-screenshots/group.png",
   },
   {
-    icon: <ChartNoAxesColumnIcon size={20} />,
-    title: "Built-in Analytics",
-    description: "Monitor activity and performance with live data.",
-    image: "/app-image-1.png",
+    icon: <HandCoinsIcon size={20} />,
+    title: "Clear Settle-Up Breakdowns",
+    description:
+      "See exactly who owes what before paying, with transparent per-person math.",
+    image: "/feature-screenshots/settle-breakdown.png",
   },
 ] satisfies Feature[];
 
