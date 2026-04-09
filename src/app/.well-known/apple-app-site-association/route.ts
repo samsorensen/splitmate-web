@@ -5,15 +5,6 @@ const appID = `${appleTeamId}.${bundleId}`;
 export async function GET() {
   return Response.json(
     {
-      applinks: {
-        apps: [],
-        details: [
-          {
-            appID: appID,
-            paths: ["/checkout_redirect*"],
-          },
-        ],
-      },
       webcredentials: {
         apps: [appID],
       },
