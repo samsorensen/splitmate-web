@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Paddle Web Payments Starter",
+  title: "SplitMate",
   description: "A vercel template for taking web payments for mobile apps with Paddle",
 };
 
