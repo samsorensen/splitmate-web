@@ -7,41 +7,40 @@ export type Feature = {
   icon: React.ReactNode;
   title: string;
   description: string;
-  /** One or more product screenshots for this feature */
+  /** One or more product screenshots for this feature (used by desktop tabs) */
   images: string[];
+  /** Single screenshot used by the mobile carousel slide */
+  carouselImage: string;
 };
 
 const features = [
   {
     icon: <CameraIcon size={20} />,
     title: "Scan Receipts in Seconds",
-    description:
-      "Snap a photo and SplitMate pulls out items, totals, and who paid—no manual entry needed.",
+    description: "Snap a photo and SplitMate pulls out items, totals, and who paid—no manual entry needed.",
     images: ["/feature-screenshots/receipt-scan.png"],
+    carouselImage: "/feature-screenshots/receipt-scan.png",
   },
   {
     icon: <MicIcon size={20} />,
     title: "Log Expenses by Voice",
-    description:
-      "Just say what you spent and SplitMate turns it into a clean expense with the right split.",
+    description: "Just say what you spent and SplitMate turns it into a clean expense with the right split.",
     images: ["/feature-screenshots/voice-listening.png"],
+    carouselImage: "/feature-screenshots/voice-listening.png",
   },
   {
     icon: <UsersIcon size={20} />,
     title: "Groups That Stay in Sync",
-    description:
-      "Create a group for roommates, trips, or events and keep every balance visible for everyone.",
+    description: "Create a group for roommates, trips, or events and keep every balance visible for everyone.",
     images: ["/feature-screenshots/group.png"],
+    carouselImage: "/feature-screenshots/group.png",
   },
   {
     icon: <HandCoinsIcon size={20} />,
     title: "Clear Settle-Up Breakdowns",
-    description:
-      "See exactly who owes what before paying, with transparent per-person math.",
-    images: [
-      "/feature-screenshots/settle-breakdown.png",
-      "/feature-screenshots/settle-up.png",
-    ],
+    description: "See exactly who owes what before paying, with transparent per-person math.",
+    images: ["/feature-screenshots/settle-breakdown.png", "/feature-screenshots/settle-up.png"],
+    carouselImage: "/feature-screenshots/settle-up.png",
   },
 ] satisfies Feature[];
 
@@ -55,7 +54,8 @@ export function Features() {
         Discover our<div className="text-muted-foreground">exceptional features</div>
       </h2>
       <p className="mb-3 max-w-lg text-center leading-6 tracking-tight sm:text-xl lg:mb-8">
-        SplitMate makes shared expenses feel effortless. Snap a receipt, add it manually, or speak it out loud, and we handle the math.
+        SplitMate makes shared expenses feel effortless. Snap a receipt, add it manually, or speak it out loud, and we
+        handle the math.
       </p>
       <FeaturesCarousel features={features} className="block lg:hidden" />
       <FeaturesTabs features={features} className="hidden lg:block" />

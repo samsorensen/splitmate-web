@@ -6,8 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pricing - SplitMate",
-  description:
-    "SplitMate isn't on the App Store yet. Pricing is free for now and will be updated when we launch.",
+  description: "SplitMate isn't on the App Store yet. Pricing is free for now and will be updated when we launch.",
 };
 
 export default function Pricing() {

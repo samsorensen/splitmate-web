@@ -21,13 +21,7 @@ export function DesktopNav({ items, className }: Props) {
   return (
     <nav className={cn("relative mx-auto flex w-full max-w-7xl items-center justify-center", className)}>
       <Link href="/" className="absolute left-0 block w-[126px]">
-        <Image
-          src="/logo-text.png"
-          alt="logo"
-          width={120}
-          height={36}
-          className="w-full h-auto"
-        />
+        <Image src="/logo-text.png" alt="logo" width={120} height={36} className="h-auto w-full" />
       </Link>
       <NavigationMenu>
         <NavigationMenuList className="gap-8">

@@ -58,7 +58,8 @@ export function Testimonials() {
         Don&apos;t Take<div className="text-muted-foreground">Our Word for It</div>
       </h2>
       <p className="mb-3 max-w-lg text-center leading-6 tracking-tight sm:text-xl lg:mb-8">
-        We&apos;ve built the ultimate expense splitting app platform so you can focus on living together, not splitting hairs over money.
+        We&apos;ve built the ultimate expense splitting app platform so you can focus on living together, not splitting
+        hairs over money.
       </p>
       <div className="relative w-[calc(100%+3rem)] overflow-x-hidden py-4 lg:w-full">
         <TestimonialMarquee testimonials={testimonials} className="mb-4" />

@@ -10,7 +10,7 @@ export function Hero() {
     <div className="z-1 grid w-full place-items-center p-8">
       <BackgroundBlur className="-top-40 md:top-0" />
       <Nav />
-      <div className="mt-16 flex flex-col items-center gap-6">
+      <div className="mt-10 flex flex-col items-center gap-6 sm:mt-16">
         <Pill>
           <PillAvatarGroup className="hidden sm:flex">
             <PillAvatar src="/avatars/1.jpg" />

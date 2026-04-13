@@ -18,7 +18,7 @@ export const members: TeamMember[] = [
     image: "/member-pictures/sam.png",
     email: "samdsorensen@gmail.com",
     linkedin: "https://www.linkedin.com/in/sam-sorensen/",
-    github: "https://github.com/samdsorensen",
+    github: "https://github.com/samsorensen",
   },
   {
     name: "Elijah Watchalotone",

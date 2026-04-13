@@ -19,10 +19,7 @@ const fadeUp = {
   },
 };
 
-const perks = [
-  "We can't charge you. We're not on the store yet.",
-  "When we launch, we'll put real pricing here.",
-];
+const perks = ["We can't charge you. We're not on the store yet.", "When we launch, we'll put real pricing here."];
 
 export function Plans() {
   return (
@@ -45,9 +42,10 @@ export function Plans() {
 
       <motion.p
         variants={fadeUp}
-        className="mb-1 max-w-lg text-center leading-6 tracking-tight text-muted-foreground sm:text-xl lg:mb-4"
+        className="text-muted-foreground mb-1 max-w-lg text-center leading-6 tracking-tight sm:text-xl lg:mb-4"
       >
-        SplitMate isn&apos;t on the App Store (yet), meaining it currently doesn&apos;t have a price, meaning it&apos;s free (for now).
+        SplitMate isn&apos;t on the App Store (yet), meaining it currently doesn&apos;t have a price, meaning it&apos;s
+        free (for now).
       </motion.p>
 
       <motion.div
@@ -56,7 +54,7 @@ export function Plans() {
       >
         <div
           aria-hidden
-          className="bg-accent/6 pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full blur-2xl"
+          className="bg-accent/6 pointer-events-none absolute -top-8 -right-8 h-32 w-32 rounded-full blur-2xl"
         />
         <div className="relative">
           <div className="mb-6">
@@ -67,12 +65,8 @@ export function Plans() {
 
           <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
             <div>
-              <p className="text-muted-foreground text-sm font-medium">
-                Today&apos;s price
-              </p>
-              <p className="mt-1 text-5xl font-medium tracking-tight sm:text-6xl">
-                $0
-              </p>
+              <p className="text-muted-foreground text-sm font-medium">Today&apos;s price</p>
+              <p className="mt-1 text-5xl font-medium tracking-tight sm:text-6xl">$0</p>
             </div>
             <p className="text-muted-foreground max-w-[14rem] text-sm leading-snug sm:text-right">
               When SplitMate launches, the price could go way up (Stripe doesn&apos;t do bargains).
@@ -81,10 +75,7 @@ export function Plans() {
 
           <ul className="border-border mt-8 space-y-3 border-t pt-6">
             {perks.map((line) => (
-              <li
-                key={line}
-                className="text-foreground/90 flex gap-3 text-sm leading-snug"
-              >
+              <li key={line} className="text-foreground/90 flex gap-3 text-sm leading-snug">
                 <span
                   className="bg-success/20 text-success mt-1.5 inline-block size-1.5 shrink-0 rounded-full"
                   aria-hidden

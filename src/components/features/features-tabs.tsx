@@ -55,11 +55,7 @@ export function FeaturesTabs({ features, className }: Props) {
 
   return (
     <div className={cn("flex w-full max-w-6xl flex-col gap-2", className)}>
-      <div
-        role="tablist"
-        className="grid h-auto w-full grid-cols-4 gap-6"
-        onKeyDown={handleTabListKeyDown}
-      >
+      <div role="tablist" className="grid h-auto w-full grid-cols-4 gap-6" onKeyDown={handleTabListKeyDown}>
         {features.map((feature, i) => (
           <button
             key={feature.title}
@@ -77,11 +73,7 @@ export function FeaturesTabs({ features, className }: Props) {
         ))}
       </div>
 
-      <div
-        role="tabpanel"
-        id={panelId}
-        aria-labelledby={tabId(activeIndex)}
-      >
+      <div role="tabpanel" id={panelId} aria-labelledby={tabId(activeIndex)}>
         <Carousel setApi={setCarouselApi}>
           <CarouselContent containerClassName="px-0">
             {features.map((feature) => (

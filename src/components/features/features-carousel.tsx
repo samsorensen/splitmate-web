@@ -34,12 +34,7 @@ export function FeaturesCarousel({ features, className }: Props) {
           {features.map((feature, index) => (
             <CarouselItem
               key={feature.title}
-              className={cn(
-                "basis-(--carousel-item-width)",
-                feature.images.length > 1
-                  ? "[--carousel-item-width:min(92vw,340px)]"
-                  : "[--carousel-item-width:240px]",
-              )}
+              className={cn("basis-(--carousel-item-width)", "[--carousel-item-width:min(92vw,300px)]")}
               onClick={() => {
                 carouselApi?.scrollTo(index);
                 setCurrent(index + 1);

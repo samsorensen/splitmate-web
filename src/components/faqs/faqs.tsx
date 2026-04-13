@@ -48,7 +48,7 @@ export function FAQs() {
           <Link href="/pricing">Get Started</Link>
         </Button>
       </div>
-      <Accordion type="single" collapsible defaultValue="branding" className="grid w-full gap-4">
+      <Accordion type="single" collapsible className="grid w-full gap-4">
         <AccordionItemFAQs value="branding">
           <AccordionTriggerFAQs>How do I add an expense in SplitMate?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
@@ -79,7 +79,9 @@ export function FAQs() {
         <AccordionItemFAQs value="notifcations">
           <AccordionTriggerFAQs>Is SplitMate available on iPhone?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
-            <p>Yes. SplitMate is built for iPhone with a clean, fast experience for capturing expenses and settling up.</p>
+            <p>
+              Yes. SplitMate is built for iPhone with a clean, fast experience for capturing expenses and settling up.
+            </p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>
       </Accordion>

@@ -29,7 +29,7 @@ export function Team() {
       <h2 className="text-center text-3xl leading-[1.1] font-medium tracking-tight sm:text-5xl">
         The team behind SplitMate
       </h2>
-      <p className="mb-1 max-w-lg text-center leading-6 tracking-tight text-muted-foreground sm:text-xl lg:mb-4">
+      <p className="text-muted-foreground mb-1 max-w-lg text-center leading-6 tracking-tight sm:text-xl lg:mb-4">
         We are a hardworking, passionate team building the fastest way to split expenses with confidence.
       </p>
 
@@ -49,10 +49,7 @@ export function Team() {
         ))}
       </div>
 
-      <div
-        aria-live="polite"
-        className="mx-auto w-full max-w-5xl"
-      >
+      <div aria-live="polite" className="mx-auto w-full max-w-5xl">
         <AnimatePresence mode="wait">
           <TeamFeatured key={selected.name} member={selected} />
         </AnimatePresence>

@@ -22,8 +22,7 @@ export const steps: TutorialStep[] = [
   },
   {
     title: "Manage Your Group",
-    description:
-      "Create a group, invite friends or roommates, and keep all shared expenses organized in one place.",
+    description: "Create a group, invite friends or roommates, and keep all shared expenses organized in one place.",
     image: "/feature-screenshots/group.png",
     alt: "Group management screen in SplitMate",
   },
