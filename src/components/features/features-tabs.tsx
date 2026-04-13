@@ -1,11 +1,11 @@
 "use client";
 
 import { FeatureDetails } from "@/components/features/feature-details";
+import { FeatureScreenshots } from "@/components/features/feature-screenshots";
 import type { Feature } from "@/components/features/features";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import { useState } from "react";
+import { useCallback, useEffect, useId, useState } from "react";
 
 type Props = {
   features: Feature[];
@@ -13,28 +13,87 @@ type Props = {
 };
 
 export function FeaturesTabs({ features, className }: Props) {
-  const [activeTab, setActiveTab] = useState(features[0].title);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
+  const idPrefix = useId();
+
+  const tabId = (i: number) => `${idPrefix}-tab-${i}`;
+  const panelId = `${idPrefix}-tabpanel`;
+
+  useEffect(() => {
+    if (!carouselApi) return;
+
+    const onSelect = () => setActiveIndex(carouselApi.selectedScrollSnap());
+    carouselApi.on("select", onSelect);
+    return () => {
+      carouselApi.off("select", onSelect);
+    };
+  }, [carouselApi]);
+
+  const handleTabClick = useCallback(
+    (index: number) => {
+      setActiveIndex(index);
+      carouselApi?.scrollTo(index);
+    },
+    [carouselApi],
+  );
+
+  const handleTabListKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      let next = activeIndex;
+      if (e.key === "ArrowRight") next = (activeIndex + 1) % features.length;
+      else if (e.key === "ArrowLeft") next = (activeIndex - 1 + features.length) % features.length;
+      else return;
+
+      e.preventDefault();
+      handleTabClick(next);
+      const btn = document.getElementById(tabId(next));
+      btn?.focus();
+    },
+    [activeIndex, features.length, handleTabClick],
+  );
 
   return (
-    <Tabs className={cn("w-full max-w-6xl", className)} value={activeTab} onValueChange={setActiveTab}>
-      <TabsList className="grid h-auto w-full grid-cols-4 gap-6">
-        {features.map((feature) => (
-          <TabsTrigger
+    <div className={cn("flex w-full max-w-6xl flex-col gap-2", className)}>
+      <div
+        role="tablist"
+        className="grid h-auto w-full grid-cols-4 gap-6"
+        onKeyDown={handleTabListKeyDown}
+      >
+        {features.map((feature, i) => (
+          <button
             key={feature.title}
-            value={feature.title}
+            type="button"
+            role="tab"
+            id={tabId(i)}
+            aria-selected={i === activeIndex}
+            aria-controls={panelId}
+            tabIndex={i === activeIndex ? 0 : -1}
             className="flex cursor-pointer flex-col items-center justify-start gap-5 px-2 py-6"
+            onClick={() => handleTabClick(i)}
           >
-            <FeatureDetails feature={feature} isActive={activeTab === feature.title} />
-          </TabsTrigger>
+            <FeatureDetails feature={feature} isActive={i === activeIndex} />
+          </button>
         ))}
-      </TabsList>
-      {features.map((feature) => (
-        <TabsContent key={feature.title} value={feature.title}>
-          <div className="bg-card flex w-full justify-center rounded-lg border p-8 pb-0">
-            <Image src={feature.image} alt="App Image" width={304} height={445} />
-          </div>
-        </TabsContent>
-      ))}
-    </Tabs>
+      </div>
+
+      <div
+        role="tabpanel"
+        id={panelId}
+        aria-labelledby={tabId(activeIndex)}
+      >
+        <Carousel setApi={setCarouselApi}>
+          <CarouselContent containerClassName="px-0">
+            {features.map((feature) => (
+              <CarouselItem key={feature.title}>
+                <div className="bg-card flex min-h-[510px] w-full items-center justify-center rounded-lg border px-8 py-10 sm:px-10">
+                  <FeatureScreenshots title={feature.title} images={feature.images} variant="tabs" />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
+    </div>
   );
 }

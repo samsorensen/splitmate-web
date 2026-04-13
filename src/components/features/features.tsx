@@ -7,7 +7,8 @@ export type Feature = {
   icon: React.ReactNode;
   title: string;
   description: string;
-  image: string;
+  /** One or more product screenshots for this feature */
+  images: string[];
 };
 
 const features = [
@@ -16,29 +17,31 @@ const features = [
     title: "Scan Receipts in Seconds",
     description:
       "Snap a photo and SplitMate pulls out items, totals, and who paid—no manual entry needed.",
-    image: "/feature-screenshots/receipt-scan.png",
-    
+    images: ["/feature-screenshots/receipt-scan.png"],
   },
   {
     icon: <MicIcon size={20} />,
     title: "Log Expenses by Voice",
     description:
       "Just say what you spent and SplitMate turns it into a clean expense with the right split.",
-    image: "/feature-screenshots/voice-listening.png",
+    images: ["/feature-screenshots/voice-listening.png"],
   },
   {
     icon: <UsersIcon size={20} />,
     title: "Groups That Stay in Sync",
     description:
       "Create a group for roommates, trips, or events and keep every balance visible for everyone.",
-    image: "/feature-screenshots/group.png",
+    images: ["/feature-screenshots/group.png"],
   },
   {
     icon: <HandCoinsIcon size={20} />,
     title: "Clear Settle-Up Breakdowns",
     description:
       "See exactly who owes what before paying, with transparent per-person math.",
-    image: "/feature-screenshots/settle-breakdown.png",
+    images: [
+      "/feature-screenshots/settle-breakdown.png",
+      "/feature-screenshots/settle-up.png",
+    ],
   },
 ] satisfies Feature[];
 

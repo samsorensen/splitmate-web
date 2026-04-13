@@ -1,22 +1,23 @@
+import { FAQs } from "@/components/faqs/faqs";
 import { Footer } from "@/components/footer/footer";
 import { Nav } from "@/components/hero/nav";
 import { RadialBlur } from "@/components/pricing/radial-blur";
-import { Plans } from "@/components/pricing/plans";
+import { Tutorial } from "@/components/tutorial/tutorial";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pricing - SplitMate",
-  description:
-    "SplitMate isn't on the App Store yet. Pricing is free for now and will be updated when we launch.",
+  title: "Tutorial — SplitMate",
+  description: "A quick walkthrough of how to use SplitMate to split expenses with friends.",
 };
 
-export default function Pricing() {
+export default function TutorialPage() {
   return (
     <div className="bg-card isolate flex h-full min-h-screen w-full flex-col">
       <RadialBlur />
       <div className="p-8">
         <Nav />
-        <Plans />
+        <Tutorial />
+        <FAQs />
       </div>
       <Footer />
     </div>

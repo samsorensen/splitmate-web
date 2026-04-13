@@ -11,6 +11,14 @@ const navItems = [
     href: "/pricing",
   },
   {
+    label: "Tutorial",
+    href: "/tutorial",
+  },
+  {
+    label: "Team",
+    href: "/team",
+  },
+  {
     label: "Legal",
     href: "/terms-and-conditions",
   },
