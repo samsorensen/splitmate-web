@@ -3,6 +3,10 @@ import { DesktopNav } from "@/components/hero/desktop-nav";
 
 const navItems = [
   {
+    label: "About",
+    href: "/#about",
+  },
+  {
     label: "Features",
     href: "/#features",
   },

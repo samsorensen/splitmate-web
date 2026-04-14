@@ -73,8 +73,8 @@ export function TeamFeatured({ member }: FeaturedProps) {
       transition={{ duration: 0.3, ease: "easeOut" }}
       className="bg-card flex w-full flex-col gap-8 rounded-2xl border p-8 shadow-sm md:flex-row md:p-10"
     >
-      <div className="flex flex-col items-center gap-4 text-center md:w-80 md:shrink-0 md:items-start md:text-left">
-        <Avatar className="size-72 rounded-2xl md:size-80">
+      <div className="flex flex-col items-center gap-4 px-2 text-center md:w-80 md:shrink-0 md:items-start md:px-0 md:text-left">
+        <Avatar className="size-64 rounded-2xl sm:size-72 md:size-80">
           <AvatarImage src={member.image} alt={`${member.name} profile photo`} className="rounded-2xl object-cover" />
           <AvatarFallback className="bg-accent/15 text-accent rounded-2xl text-4xl font-medium">
             {getInitials(member.name)}

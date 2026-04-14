@@ -1,5 +1,6 @@
 "use client";
 
+import { About } from "@/components/about/about";
 import { FAQs } from "@/components/faqs/faqs";
 import { Features } from "@/components/features/features";
 import { Footer } from "@/components/footer/footer";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <About />
       <Showcase />
       <Quote />
       <Features />
