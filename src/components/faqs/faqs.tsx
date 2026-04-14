@@ -80,7 +80,7 @@ export function FAQs() {
           <AccordionTriggerFAQs>Is SplitMate available on iPhone?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
             <p>
-              SplitMate is built for iPhone and launches soon. We're putting the finishing touches on a clean, fast
+              SplitMate is built for iPhone and launches soon. We&apos;re putting the finishing touches on a clean, fast
               experience for capturing expenses and settling up.
             </p>
           </AccordionContentFAQs>

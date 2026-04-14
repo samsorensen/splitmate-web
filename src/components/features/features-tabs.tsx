@@ -47,10 +47,10 @@ export function FeaturesTabs({ features, className }: Props) {
 
       e.preventDefault();
       handleTabClick(next);
-      const btn = document.getElementById(tabId(next));
+      const btn = document.getElementById(`${idPrefix}-tab-${next}`);
       btn?.focus();
     },
-    [activeIndex, features.length, handleTabClick],
+    [activeIndex, features.length, handleTabClick, idPrefix],
   );
 
   return (
