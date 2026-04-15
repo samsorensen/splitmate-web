@@ -65,6 +65,17 @@ export function About() {
         </div>
       </div>
 
+      <div className="mt-12 w-full max-w-5xl">
+        <span className="text-muted-foreground text-xs font-medium tracking-widest uppercase">How It Works</span>
+        <div className="mt-6 overflow-x-auto">
+          <img 
+            src="/splitmate-high-level.svg" 
+            alt="SplitMate High-Level Architecture" 
+            className="w-full"
+          />
+        </div>
+      </div>
+
       <div className="mt-10 flex w-full flex-col items-center gap-5">
         <span className="text-muted-foreground text-xs font-medium tracking-widest uppercase">Powered by</span>
         <ul className="flex flex-wrap items-end justify-center gap-x-8 gap-y-6 md:gap-x-12">
