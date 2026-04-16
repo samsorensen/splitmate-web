@@ -10,13 +10,5 @@ bun install
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
-
-## Tech Stack
-
-- Next.js 15 (Turbopack)
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- Radix UI + shadcn/ui
-- Motion (animations)
+Open [http://localhost:3000](http://localhost:3000) to view the dev site. 
+Or open [http://split-mate.store](http://split-mate.store) to view the live site.

@@ -68,7 +68,7 @@ export function Plans() {
               <p className="text-muted-foreground text-sm font-medium">Today&apos;s price</p>
               <p className="mt-1 text-5xl font-medium tracking-tight sm:text-6xl">$0</p>
             </div>
-            <p className="text-muted-foreground max-w-[14rem] text-sm leading-snug sm:text-right">
+            <p className="text-muted-foreground max-w-56 text-sm leading-snug sm:text-right">
               When SplitMate launches, the price could go way up (Stripe doesn&apos;t do bargains).
             </p>
           </div>
